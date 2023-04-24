@@ -1,0 +1,20 @@
+Model,Best Params,Train score,Test score
+Regresion Lineal,--,0.7236248380409595,0.6932328156300367
+Regularizacion,Lasso(alpha=3.359818286283774),0.7233003895810883,0.6928116594497236
+KNN Regresor,"KNeighborsRegressor(leaf_size=10, n_neighbors=21, p=1, weights='distance')",0.9993164550473486,0.7237300689525099
+Decision Tree,"DecisionTreeRegressor(max_depth=10, min_samples_leaf=8, min_samples_split=19,
+                      random_state=42)",0.8164395977667072,0.69609422541357
+SVR,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('svr', SVR(C=5, degree=2, epsilon=0.5, kernel='linear'))])",0.7070073010018955,0.6745679120028847
+LinearSVR,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('svr_lin',
+                 LinearSVR(C=1, epsilon=1,
+                           loss='squared_epsilon_insensitive'))])",0.7236142331131911,0.693130943702679
+RandomForest,"RandomForestRegressor(max_depth=19, max_features='sqrt', n_estimators=200,
+                      random_state=42)",0.9661209123546292,0.7781304760678849
+AdaBoost Tree Regressor,"AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=15,
+                                                       min_samples_leaf=2,
+                                                       random_state=42),
+                  loss='exponential', n_estimators=100)",0.970261315719722,0.7733189764639494
+GradientBoostTree,"GradientBoostingRegressor(learning_rate=0.05, max_depth=10, max_features='log2',
+                          n_estimators=200)",0.9729385968641344,0.7846295743519967

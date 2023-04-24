@@ -1,0 +1,29 @@
+Model,Best Params,Train score,Test score
+Regresion Lineal,--,0.6970984670284945,0.653456259656521
+Regularizacion,Lasso(alpha=3.359818286283774),0.6969910488991136,0.6533874384604553
+KNN Regresor,"KNeighborsRegressor(leaf_size=21, n_neighbors=19, p=1, weights='distance')",0.996964108903784,0.7026978633601044
+Decision Tree,"DecisionTreeRegressor(criterion='friedman_mse', max_depth=10,
+                      min_samples_leaf=3, min_samples_split=18,
+                      random_state=42)",0.8183188881387106,0.6761689277696106
+SVR,"{'svr_lin__C': [0.01, 0.1, 1, 10], 'svr_lin__epsilon': [0.01, 0.1, 1, 10], 'svr_lin__max_iter': [1000, 5000, 7000, 10000], 'svr_lin__loss': ['epsilon_insensitive', 'squared_epsilon_insensitive']}",0.6748624937965213,0.6250477838711164
+LinearSVR,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('svr_lin',
+                 LinearSVR(C=10, epsilon=1,
+                           loss='squared_epsilon_insensitive'))])",0.6965167135295497,0.6538252470564403
+RandomForest,"RandomForestRegressor(max_depth=15, max_features='sqrt', n_estimators=200,
+                      random_state=42)",0.9359770768803664,0.7535019874727165
+AdaBoost Tree Regressor,"AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=15,
+                                                       min_samples_leaf=2,
+                                                       min_samples_split=5,
+                                                       random_state=42),
+                  learning_rate=0.2, loss='exponential', n_estimators=150)",0.9728211698114707,0.7477843556038244
+GradientBoostTree,"GradientBoostingRegressor(learning_rate=0.05, max_depth=10, max_features='log2')",0.9465925059302507,0.760301840739361
+XGBoost,"XGBRegressor(alpha=5, base_score=0.5, booster='gbtree', callbacks=None,
+             colsample_bylevel=1, colsample_bynode=1, colsample_bytree=0.8,
+             early_stopping_rounds=None, enable_categorical=False,
+             eval_metric=None, gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+             importance_type=None, interaction_constraints='', lambda=0.1,
+             learning_rate=0.05, max_bin=256, max_cat_to_onehot=4,
+             max_delta_step=0, max_depth=10, max_leaves=0, min_child_weight=5,
+             missing=nan, monotone_constraints='()', n_estimators=100, n_jobs=0,
+             num_parallel_tree=1, predictor='auto', random_state=0, ...)",0.895561676663607,0.750219697173272

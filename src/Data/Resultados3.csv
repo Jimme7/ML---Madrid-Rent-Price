@@ -1,0 +1,31 @@
+Model,Best Params,Train score,Test score
+Regresion Lineal,--,0.706334400696993,0.6795320995418535
+Regularizacion,Lasso(alpha=3.359818286283774),0.7062473435671592,0.6791247770284143
+KNN Regresor,"KNeighborsRegressor(leaf_size=42, n_neighbors=21, p=1, weights='distance')",0.9983927043761138,0.7321974126330439
+Decision Tree,"DecisionTreeRegressor(max_depth=10, max_features='auto', min_samples_leaf=9,
+                      random_state=42)",0.8097376521471181,0.6971852112011179
+SVR,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('svr', SVR(C=5, degree=2, kernel='linear'))])",0.6872636314339933,0.6550284097780451
+LinearSVR,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('svr_lin',
+                 LinearSVR(C=10, epsilon=1,
+                           loss='squared_epsilon_insensitive'))])",0.7056820046624842,0.6794085212157286
+RandomForest con 8 columnas,"{'n_estimators': [10, 50, 100], 'max_features': ['sqrt', 'log2'], 'max_depth': [5, 10, 15], 'min_samples_split': [2, 5], 'min_samples_leaf': [1, 2], 'bootstrap': [True], 'max_leaf_nodes': [None, 10], 'min_impurity_decrease': [0.0, 0.001]}",0.9693343480728126,0.7787556842769681
+RandomForest con 3 columnas,"RandomForestRegressor(max_depth=10, max_features='sqrt',
+                      min_impurity_decrease=0.001, random_state=42)",0.8333754410255828,0.7161516675593069
+AdaBoost Tree Regressor,"AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=7,
+                                                       min_samples_leaf=2,
+                                                       min_samples_split=5,
+                                                       random_state=42),
+                  learning_rate=0.1, loss='exponential', n_estimators=100)",0.8139569268175134,0.7338503345938925
+GradientBoostTree,"GradientBoostingRegressor(learning_rate=0.05, max_depth=8, max_features='log2',
+                          n_estimators=50)",0.8622502812084593,0.7578687080891989
+XGBoost,"XGBRegressor(alpha=0.5, base_score=0.5, booster='gbtree', callbacks=None,
+             colsample_bylevel=1, colsample_bynode=1, colsample_bytree=0.6,
+             early_stopping_rounds=None, enable_categorical=False,
+             eval_metric=None, gamma=0.1, gpu_id=-1, grow_policy='depthwise',
+             importance_type=None, interaction_constraints='', lambda=0.5,
+             learning_rate=0.1, max_bin=256, max_cat_to_onehot=4,
+             max_delta_step=0, max_depth=8, max_leaves=0, min_child_weight=5,
+             missing=nan, monotone_constraints='()', n_estimators=100, n_jobs=0,
+             num_parallel_tree=1, predictor='auto', random_state=0, ...)",0.8989640071788759,0.7751380788206108
